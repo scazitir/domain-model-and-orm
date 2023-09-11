@@ -13,7 +13,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(unique = true)
     private String email;
+    //configuro para que o campo email seja unico, onde o proprio banco
+    // nao vai repetir essa informacao
     private String phone;
     private LocalDate birthDate;
     private String password;
